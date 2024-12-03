@@ -12,3 +12,9 @@ To activate the virtual environment we do:
 or ``.\venv\Scripts\Activate`` in Windows/powershell
 In order to add new packages to our new virtual environment we create a file called `requirements.txt` and execute the following command: 
 ``pip install -r reqirements.txt``
+## Deploying our functions
+First, we have to set our project ID with the following command:
+
+```gcloud config set project  [YOUR_PROJECT_ID```
+Then we deploy our function with this command:
+``gcloud funtions deploy [FUNCTION_NAME] --runtime python37 --trigger-http``
